@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource {
     
     var isDark = false;
+    let colorsArr = ["red","blue","green","yellow"]
+    let animalsArr = ["dog","cat","jaguar","pinguin","elephant"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +32,42 @@ class ViewController: UIViewController, UITableViewDataSource {
         isDark = !isDark
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        switch section {
+        case 0:
+            return colorsArr.count
+        case 1:
+            return animalsArr.count
+        default:
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "[colors]"
+        case 1:
+            return "[animals]"
+        default:
+            return nil
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "This is the \(indexPath.row) row"
+        switch indexPath.section {
+        case 0:
+            cell.textLabel?.text = colorsArr[indexPath.row]
+        case 1:
+            cell.textLabel?.text = animalsArr[indexPath.row]
+        default:
+            cell.textLabel?.text = "something goes really wrong :)"
+        }
         return cell;
     }
 
