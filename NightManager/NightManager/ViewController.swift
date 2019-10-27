@@ -17,7 +17,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func changeBackground(_ sender: Any) {
-        view.backgroundColor = isDark ? UIColor.gray : UIColor.white
+        view.backgroundColor = isDark ? UIColor.darkGray : UIColor.white
+        
+        let subviews: [UIView] = view.subviews
+        for aview in subviews {
+            if aview is UILabel {
+                let cLabel = aview as! UILabel
+                cLabel.textColor = isDark ? UIColor.lightGray : UIColor.black
+            }
+        }
         isDark = !isDark
     }
     
