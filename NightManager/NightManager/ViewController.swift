@@ -64,8 +64,12 @@ class ViewController: UIViewController, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             reusableCell.textLabel?.text = colorsArr[indexPath.row]
+            reusableCell.imageView?.image = UIImage(named: "virus")
         case 1:
             reusableCell.textLabel?.text = animalsArr[indexPath.row]
+            reusableCell.imageView?.image = nil
+            reusableCell.detailTextLabel?.text = "these are really wild animals here"
+            reusableCell.accessoryType = .detailButton
         default:
             reusableCell.textLabel?.text = "something goes really wrong :)"
         }
