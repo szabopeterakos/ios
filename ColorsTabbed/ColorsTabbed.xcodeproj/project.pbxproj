@@ -14,6 +14,7 @@
 		F08DB7842367585D0052A14D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F08DB7822367585D0052A14D /* Main.storyboard */; };
 		F08DB786236758600052A14D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F08DB785236758600052A14D /* Assets.xcassets */; };
 		F08DB789236758600052A14D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F08DB787236758600052A14D /* LaunchScreen.storyboard */; };
+		F08DB791236758AA0052A14D /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08DB790236758AA0052A14D /* GreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F08DB785236758600052A14D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F08DB788236758600052A14D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F08DB78A236758600052A14D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F08DB790236758AA0052A14D /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				F08DB77E2367585D0052A14D /* FirstViewController.swift */,
 				F08DB7802367585D0052A14D /* SecondViewController.swift */,
 				F08DB7822367585D0052A14D /* Main.storyboard */,
+				F08DB790236758AA0052A14D /* GreenViewController.swift */,
 				F08DB785236758600052A14D /* Assets.xcassets */,
 				F08DB787236758600052A14D /* LaunchScreen.storyboard */,
 				F08DB78A236758600052A14D /* Info.plist */,
@@ -145,6 +148,7 @@
 				F08DB77F2367585D0052A14D /* FirstViewController.swift in Sources */,
 				F08DB77B2367585D0052A14D /* AppDelegate.swift in Sources */,
 				F08DB77D2367585D0052A14D /* SceneDelegate.swift in Sources */,
+				F08DB791236758AA0052A14D /* GreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
