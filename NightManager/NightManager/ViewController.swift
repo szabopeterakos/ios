@@ -59,16 +59,17 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let reusableCell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath)
+//        let cell = UITableViewCell()
         switch indexPath.section {
         case 0:
-            cell.textLabel?.text = colorsArr[indexPath.row]
+            reusableCell.textLabel?.text = colorsArr[indexPath.row]
         case 1:
-            cell.textLabel?.text = animalsArr[indexPath.row]
+            reusableCell.textLabel?.text = animalsArr[indexPath.row]
         default:
-            cell.textLabel?.text = "something goes really wrong :)"
+            reusableCell.textLabel?.text = "something goes really wrong :)"
         }
-        return cell;
+        return reusableCell;
     }
 
     
